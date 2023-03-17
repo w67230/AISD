@@ -8,12 +8,13 @@ namespace AISD
 {
     public class Statyki
     {
+        public static int lab = 0, nr = 0;
         public static int GetLiczbaZadan(int lab)
         {
             switch (lab)
             {
                     case 1:return 5;
-                    case 2:return 0;
+                    case 2:return 3;
                     case 3:return 0;
                     case 4:return 0;
                     default:return 0;
@@ -22,7 +23,7 @@ namespace AISD
 
         public static int getLiczbaLaboratoriow()
         {
-            return 1;
+            return 2;
         }
     }
 }

@@ -1,17 +1,16 @@
-﻿
+﻿using AISD;
+
 String input = "";
-int lab = 0;
-int nr = 0;
 
 while (true)
 {
-    while (lab < 1 || lab > AISD.Statyki.getLiczbaLaboratoriow())
+    while (Statyki.lab < 1 || Statyki.lab > Statyki.getLiczbaLaboratoriow())
     {
         Console.WriteLine("Podaj numer laboratoriow");
         input = Console.ReadLine();
         try
         {
-            lab = Convert.ToInt32(input);
+            Statyki.lab = Convert.ToInt32(input);
         }
         catch (Exception)
         {
@@ -19,13 +18,13 @@ while (true)
         }
     }
 
-    while (nr < 1 || nr > AISD.Statyki.GetLiczbaZadan(lab))
+    while (Statyki.nr < 1 || Statyki.nr > Statyki.GetLiczbaZadan(Statyki.lab))
     {
         Console.WriteLine("Podaj numer zadania");
         input = Console.ReadLine();
         try
         {
-            nr = Convert.ToInt32(input);
+            Statyki.nr = Convert.ToInt32(input);
         }
         catch (Exception)
         {
@@ -33,9 +32,9 @@ while (true)
         }
     }
 
-    if(lab == 1)
+    if(Statyki.lab == 1)
     {
-        switch(nr){
+        switch(Statyki.nr){
             case 1: AISD.Lab01.Zad1.Run(); break;
             case 2: AISD.Lab01.Zad2.Run(); break;
             case 3: AISD.Lab01.Zad3.Run(); break;
@@ -45,9 +44,16 @@ while (true)
 
         }
     }
-    else if(lab == 2)
+    else if(Statyki.lab == 2)
     {
-        Console.WriteLine("Jeszcze nie bylo drugich labow");
+        switch (Statyki.nr)
+        {
+            case 1: AISD.Lab02.Zad1.Run(); break;
+            case 2: AISD.Lab02.Zad2.Run(); break;
+            case 3: AISD.Lab02.Zad3.Run(); break;
+            default: break;
+
+        }
     }
     else
     {
@@ -55,7 +61,7 @@ while (true)
     }
 
 
-    if(nr >= AISD.Statyki.GetLiczbaZadan(lab))
+    if(Statyki.nr >= Statyki.GetLiczbaZadan(Statyki.lab))
     {
         break;
     }
@@ -67,7 +73,7 @@ while (true)
 
     if (input == "t")
     {
-        nr++;
+        Statyki.nr++;
         Console.WriteLine("Uruchomiono kolejne zadanie:");
         Console.WriteLine();
         Console.WriteLine();
