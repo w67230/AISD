@@ -15,7 +15,7 @@ namespace AISD
             {
                     case 1:return 5;
                     case 2:return 3;
-                    case 3:return 0;
+                    case 3:return 7;
                     case 4:return 0;
                     default:return 0;
             }
@@ -23,7 +23,7 @@ namespace AISD
 
         public static int getLiczbaLaboratoriow()
         {
-            return 2;
+            return 3;
         }
     }
 }
