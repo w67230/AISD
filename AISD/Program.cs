@@ -70,6 +70,18 @@ while (true)
 
         }
     }
+    else if (Statyki.lab == 4)
+    {
+        switch (Statyki.nr)
+        {
+            case 1: AISD.Lab04.Zad1.Run(); break;
+            case 2: AISD.Lab04.Zad2.Run(); break;
+            case 3: AISD.Lab04.Zad3.Run(); break;
+            case 4: AISD.Lab04.Zad4.Run(); break;
+            default: break;
+
+        }
+    }
     else
     {
         Console.WriteLine("jak?");
