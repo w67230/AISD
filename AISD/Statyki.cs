@@ -17,13 +17,14 @@ namespace AISD
                     case 2:return 3;
                     case 3:return 7;
                     case 4:return 4;
-                    default:return 0;
+                    case 5: return 4;
+                default:return 0;
             }
         }
 
         public static int getLiczbaLaboratoriow()
         {
-            return 4;
+            return 5;
         }
     }
 }
