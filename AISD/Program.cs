@@ -94,6 +94,16 @@ while (true)
 
         }
     }
+    else if (Statyki.lab == 6)
+    {
+        switch (Statyki.nr)
+        {
+            case 1: AISD.Lab06.Zad1.Run(); break;
+            case 2: AISD.Lab06.Zad2.Run(); break;
+            default: break;
+
+        }
+    }
     else
     {
         Console.WriteLine("jak?");
