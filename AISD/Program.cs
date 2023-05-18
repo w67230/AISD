@@ -118,6 +118,19 @@ while (true)
 
         }
     }
+    else if (Statyki.lab == 8)
+    {
+        switch (Statyki.nr)
+        {
+            case 1: AISD.Lab08.Zad1.Run(); break;
+            case 2: AISD.Lab08.Zad2.Run(); break;
+            case 3: AISD.Lab08.Zad3.Run(); break;
+            case 4: AISD.Lab08.Zad4.Run(); break;
+            case 5: AISD.Lab08.Zad5.Run(); break;
+            default: break;
+
+        }
+    }
     else
     {
         Console.WriteLine("jak?");
