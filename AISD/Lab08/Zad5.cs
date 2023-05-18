@@ -21,6 +21,13 @@ namespace AISD.Lab08
                 pierPolowka.AddRange(list.GetRange(start, (mid-start)+1));
 
                 i = pierPolowka.Count-1;
+
+                if (start == end)
+                {
+                    if (szukanaWartosc != pierPolowka[i]) return false;
+                    return true;
+                }
+
                 if (szukanaWartosc == pierPolowka[i])
                 {
                     return true;
@@ -36,11 +43,7 @@ namespace AISD.Lab08
                     mid = (end + start) / 2;
                 }
 
-                if (start == end)
-                {
-                    if (szukanaWartosc != pierPolowka[i]) return false;
-                    return true;
-                }
+
             }
             return false;
         }
@@ -50,7 +53,7 @@ namespace AISD.Lab08
             Console.WriteLine("Zadanie 5 - wyszukiwanie binarne");
             Console.WriteLine();
 
-            List<int> list = new List<int> { 13, 1, 25, 79, 92, 16, 9, 63, 92, 1 };
+            List<int> list = new List<int> { 13, 25, 79, 92, 16, 9, 63, 1 };
 
             Console.WriteLine("Podaj liczbe do znaleienia w liscie");
             int x = Convert.ToInt32(Console.ReadLine());
