@@ -13,18 +13,19 @@ namespace AISD.Lab08
         {
             Zad4.SortujListe(list); // <------ lista musi byc posortowana zeby dzialalo
             int start = 0, end = list.Count - 1, mid = end/ 2;
+            int i;
             List<int> pierPolowka = new List<int>();
             while (true)
             {
                 pierPolowka.Clear();
                 pierPolowka.AddRange(list.GetRange(start, (mid-start)+1));
 
-
-                if (szukanaWartosc == pierPolowka[pierPolowka.Count - 1])
+                i = pierPolowka.Count-1;
+                if (szukanaWartosc == pierPolowka[i])
                 {
                     return true;
                 }
-                else if(szukanaWartosc < pierPolowka[pierPolowka.Count-1])
+                else if(szukanaWartosc < pierPolowka[i])
                 {
                     end = mid;
                     mid = (end + start) / 2;
@@ -37,7 +38,7 @@ namespace AISD.Lab08
 
                 if (start == end)
                 {
-                    if (szukanaWartosc != pierPolowka[pierPolowka.Count - 1]) return false;
+                    if (szukanaWartosc != pierPolowka[i]) return false;
                     return true;
                 }
             }
