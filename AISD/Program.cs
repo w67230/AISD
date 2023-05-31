@@ -143,6 +143,19 @@ while (true)
 
         }
     }
+    else if (Statyki.lab == 10)
+    {
+        switch (Statyki.nr)
+        {
+            case 1: AISD.Lab10.Zad1.Run(); break;
+            case 2: AISD.Lab10.Zad2.Run(); break;
+            case 3: AISD.Lab10.Zad3.Run(); break;
+            case 4: AISD.Lab10.Zad4.Run(); break;
+            case 5: AISD.Lab10.Zad5.Run(); break;
+            default: break;
+
+        }
+    }
     else
     {
         Console.WriteLine("jak?");

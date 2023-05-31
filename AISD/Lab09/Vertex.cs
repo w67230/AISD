@@ -32,6 +32,7 @@ namespace AISD.Lab09
         public void AddNeighbor(Vertex vertex, int cost)
         {
             if(!connections.ContainsKey(vertex)) this.connections.Add(vertex, cost);
+            else if (connections[vertex] > cost) connections[vertex] = cost;
         }
     }
 }
