@@ -36,11 +36,11 @@ namespace AISD.Lab09
         {
             Console.WriteLine("Podaj ile wierzcholkow chcesz stworzyc w tym grafie");
             int i;
-            input = Console.ReadLine();
             while (true)
             {
                 try
                 {
+                    input = Console.ReadLine();
                     i = Convert.ToInt32(input);
                     break;
                 }
@@ -64,11 +64,11 @@ namespace AISD.Lab09
         {
             Console.WriteLine("Podaj ile polaczen miedzy wierzcholkami chcesz stworzyc w tym grafie");
             int i;
-            input = Console.ReadLine();
             while (true)
             {
                 try
                 {
+                    input = Console.ReadLine();
                     i = Convert.ToInt32(input);
                     break;
                 }
@@ -112,7 +112,7 @@ namespace AISD.Lab09
             }
         }
 
-        private static void WyswietlMacierzSasiedztwa(Graph graf)
+        public static void WyswietlMacierzSasiedztwa(Graph graf)
         {
             Console.WriteLine();
             int wielkosc = graf.GetVertices().Count;

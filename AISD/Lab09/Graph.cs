@@ -91,5 +91,21 @@ namespace AISD.Lab09
 
 
         }
+
+        public void SortujListePolaczen()
+        {
+            (Vertex, Vertex, int) temp;
+            for (int i = 1; i < this.edges.Count; i++)
+            {
+                if (this.edges[i].Item3 < this.edges[i - 1].Item3)
+                {
+                    temp = this.edges[i];
+                    this.edges[i] = this.edges[i - 1];
+                    this.edges[i - 1] = temp;
+                    if (i > 1) i -= 2;
+                }
+            }
+        }
+
     }
 }
